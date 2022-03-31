@@ -32,7 +32,49 @@
             title="证件类型"
             name="1"
           >
-
+            <el-row>
+              <el-radio
+                v-model="radio"
+                label="1"
+                border
+              >原尺寸</el-radio>
+              <el-radio
+                v-model="radio"
+                label="2"
+                border
+              >小一寸</el-radio>
+            </el-row>
+            <el-row class="mt-2">
+              <el-radio
+                v-model="radio"
+                label="3"
+                border
+              >一寸</el-radio>
+              <el-radio
+                v-model="radio"
+                label="4"
+                border
+              >大一寸</el-radio>
+            </el-row>
+            <el-row class="mt-2">
+              <el-radio
+                v-model="radio"
+                label="5"
+                border
+              >小二寸</el-radio>
+              <el-radio
+                v-model="radio"
+                label="6"
+                border
+              >二寸</el-radio>
+            </el-row>
+            <el-row class="mt-2">
+              <el-radio
+                v-model="radio"
+                label="7"
+                border
+              >大二寸</el-radio>
+            </el-row>
           </el-collapse-item>
           <el-collapse-item
             class="ml-2"
@@ -117,12 +159,13 @@ fabric.Object.prototype.set({
 export default {
   data () {
     return {
-      activeNames: ['1'],
+      radio: '1',
+      activeNames: ['2'],
       isHide: true,
       checkAll: false,
       isChecked: false,
       isIndeterminate: true,
-      backgroundColor,
+      backgroundColor: "#ffffff",
       predefineColors: ["#ffffff", "#FF0000", "#000000", "#FFF800", "#00FF0A", "#FD00FF", "#0095FF"],
       checked: true,
       // 模板图片保存数组
